@@ -133,7 +133,7 @@ var server = http.createServer(function (req, res) {
           console.log(photos);
           console.log('===========================');
           
-          photos.replace(/\'/g, "\"");
+          photos = photos.replace(/\'/g, "\"");
           photos = JSON.parse(photos);
           flickr_output += '<ul>';
           for (i in photos.items) {
